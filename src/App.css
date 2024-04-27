@@ -65,8 +65,8 @@ nav{
   border-radius:10px;
 }
 
-.user img{
-  width:100%
+.viewIcon{
+  cursor:pointer;
 }
 
 .all-users{
@@ -228,7 +228,7 @@ span{
 
 .form{
   width:30%;
-  height:50vh;
+  min-height:50vh;
   margin:auto;
   background-color: #585858;
   color: white;
@@ -258,4 +258,30 @@ span{
   border-radius: 7px;
   align-self: center;
   background-color:#383838;
+}
+
+.userContainer{
+  width: 50%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top:200px;
+  border-radius:10px;
+}
+
+.sameLineDiv{
+  width:100%;
+  justify-content: center;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  gap:10px;
+}
+
+.sameLineDiv img{
+    margin-top:5px;
+    width: 30px;
+    height: 30px;
 }

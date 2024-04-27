@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
+import viewIcon from "../Images/viewIcon.png";
+
 export default function Users() {
 
     var [users, setUser] = useState([]);
@@ -16,11 +18,11 @@ export default function Users() {
 
         getData();
     }, [])
-    
-    // function getId(id){
-    //   sessionStorage.setItem("userId", id);
-    //   navigate("/viewUsers");
-    // }
+
+    function getId(id){
+      // sessionStorage.setItem("userId", id);
+      navigate("/viewUser", {state: {userId: id}});
+    }
     
 
   return (
@@ -44,8 +46,10 @@ export default function Users() {
 
                 <div className = 'user'>
                   <h2>{item.name}</h2>
+                  <img src={item.pfp} alt = 'user' width={200}/>
                   <p>Age: {item.age}</p>
                   <p>Gender: {item.gender}</p>
+                  <img src={viewIcon} className = 'viewIcon' onClick={()=> getId(item._id)} height={20} alt = 'view'/>
                 </div>
             )
         })}

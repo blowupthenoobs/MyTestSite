@@ -15,6 +15,8 @@ import Cart from './Components/Cart';
 import Videos from './Components/Videos';
 import ViewVideos from './Components/ViewVideos';
 import AddUser from './Components/AddUser';
+import UserDetails from './Components/UserDetails';
+import EditUser from './Components/EditUser';
 import{Route, Routes, BrowserRouter} from 'react-router-dom';
 
 //rfc to quickly set up components
@@ -44,6 +46,8 @@ function App() {
           <Route path='/videos' element={<> <Header name="Videos" color="gold"/> <NavBar/>  <Videos/> </>}/>
           <Route path='/viewvideos' element={<> <NavBar/>  <ViewVideos/> </>}/>
           <Route path='/addUser' element={<> <Header name="Users" color="grey"/> <NavBar/>  <AddUser/> </>}/>
+          <Route path='/editUser' element={<> <Header name="Users" color="grey"/> <NavBar/>  <EditUser/> </>}/>
+          <Route path='/viewUser' element={<> <Header name="Users" color="brown"/> <NavBar/>  <UserDetails/> </>}/>
         </Routes>
       </BrowserRouter>
     </>
