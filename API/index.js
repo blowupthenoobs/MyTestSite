@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json({limit: "10mb"}));
 
 var Users = require("./Model/Users");
+var Employees = require("./Model/Employees");
 
 var users={
     name:"John",
@@ -85,4 +86,15 @@ app.post("/users", async (req, res)=>{
     var addUser = new Users(req.body);
     addUser.save();
     res.status(200).send(addUser);
+})
+
+app.post("/employees", async (req, res)=>{
+    var addEmployee = new Employees(req.body);
+    await addEmployee.save();
+    res.status(200).send(addEmployee);
+})
+
+app.get("/employees", async (req, res)=>{
+    var findEmployees = await Employees.find();
+    res.status(200).send(findEmployees);
 })
