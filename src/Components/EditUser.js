@@ -45,6 +45,17 @@ export default function EditUser()
         })
     }
 
+    function deleteUser()
+    {
+        axios.delete("http://localhost:8080/users/"+id).then(()=>{
+            NotificationManager.success("User Deleted");
+            navigate("/users");
+        }).catch((e)=>{
+            NotificationManager.error("Something Went Wrong");
+            console.log(e);
+        })
+    }
+
     return(
         <div className='form'>
             <NotificationContainer/>
@@ -57,7 +68,11 @@ export default function EditUser()
             <br/><br/>
             {/* <input type='file' name='file' id='file' accept='image/*' onChange={readFile} width={200} height={200}/> */}
 
-            <button onClick={editInfo}>Publish Changes</button>
+            <div className='sameLineDiv'>
+                <button onClick={editInfo}>Publish Changes</button>
+                <button onClick={deleteUser}>Delete User</button>
+            </div>
+            
     </div>
     )
 }

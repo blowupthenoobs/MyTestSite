@@ -14,6 +14,7 @@ function NavBar(){
                 <Link to="/todos" className="links">ToDos</Link>
                 <Link to="/cart" className="links">Cart</Link>
                 <Link to="/videos" className="links">Videos</Link>
+                <Link to="/employees" className="links">Employees</Link>
             </nav>
         </>
     )

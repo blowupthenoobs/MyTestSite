@@ -17,6 +17,15 @@ var users={
     gender: "male"
 }
 
+var employees={
+    name: "Bob",
+    age:37,
+    gender: "male",
+    position: "janitor",
+    number: "(111) 111-1111",
+    password: "123"
+}
+
 var products=[
     {
         name:"iphone",
@@ -88,13 +97,30 @@ app.post("/users", async (req, res)=>{
     res.status(200).send(addUser);
 })
 
+app.delete("/users/:id", async (req, res)=>{
+    try {
+        const _id = req.params.id;
+
+        const deleteUser = await Users.findByIdAndDelete(_id);
+        res.status(200).send(deleteUser);
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
 app.post("/employees", async (req, res)=>{
     var addEmployee = new Employees(req.body);
-    await addEmployee.save();
+    addEmployee.save();
     res.status(200).send(addEmployee);
 })
 
 app.get("/employees", async (req, res)=>{
     var findEmployees = await Employees.find();
     res.status(200).send(findEmployees);
+})
+
+app.get("/employees/:id", async (req, res)=>{
+    var _id = req.params.id;
+    var getEmployee = await Employees.findById(_id);
+    res.status(200).send(getEmployee);
 })

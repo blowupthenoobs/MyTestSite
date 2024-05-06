@@ -17,6 +17,8 @@ import ViewVideos from './Components/ViewVideos';
 import AddUser from './Components/AddUser';
 import UserDetails from './Components/UserDetails';
 import EditUser from './Components/EditUser';
+import Employees from './Components/Employees';
+import ViewEmployee from './Components/ViewEmployee';
 import{Route, Routes, BrowserRouter} from 'react-router-dom';
 
 //rfc to quickly set up components
@@ -48,6 +50,8 @@ function App() {
           <Route path='/addUser' element={<> <Header name="Users" color="grey"/> <NavBar/>  <AddUser/> </>}/>
           <Route path='/editUser' element={<> <Header name="Users" color="grey"/> <NavBar/>  <EditUser/> </>}/>
           <Route path='/viewUser' element={<> <Header name="Users" color="brown"/> <NavBar/>  <UserDetails/> </>}/>
+          <Route path='/employees' element={<> <Header name="Employees" color="green"/> <NavBar/>  <Employees/> </>}/>
+          <Route path='/viewEmployee' element={<> <Header name="Employee" color="turquoise"/> <NavBar/>  <ViewEmployee/> </>}/>
         </Routes>
       </BrowserRouter>
     </>
