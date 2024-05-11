@@ -18,7 +18,10 @@ import AddUser from './Components/AddUser';
 import UserDetails from './Components/UserDetails';
 import EditUser from './Components/EditUser';
 import Employees from './Components/Employees';
+import AddEmployee from './Components/AddEmployee'
 import ViewEmployee from './Components/ViewEmployee';
+import EmployeePasword from './Components/EmployeePassword';
+import EditEmployee from './Components/EditEmployee';
 import{Route, Routes, BrowserRouter} from 'react-router-dom';
 
 //rfc to quickly set up components
@@ -41,7 +44,7 @@ function App() {
           <Route path='/demo' element={<> <Header name="Demo" color="purple"/> <NavBar/> <Demo/> </>}/>
           <Route path='/product' element={<> <Header name="Product" color="grey"/> <NavBar/>  <Product/> </>}/>
           <Route path='/users' element={<> <Header name="Users" color="navy"/> <NavBar/>  <Users/> </>}/>
-          <Route path='/todos' element={<> <Header name="Todos" color="dandalion"/> <NavBar/>  <Todos/> </>}/>
+          <Route path='/todos' element={<> <Header name="Todos" color="darkorange"/> <NavBar/>  <Todos/> </>}/>
           <Route path='/viewProduct' element={<> <Header name="View Product" color="grey"/> <NavBar/>  <ViewProduct/> </>}/>
           <Route path='/viewUsers' element={<> <Header name="View Users" color="darkgreen"/> <NavBar/>  <ViewUsers/> </>}/>
           <Route path='/cart' element={<> <Header name="Cart" color="pink"/> <NavBar/>  <Cart/> </>}/>
@@ -51,7 +54,10 @@ function App() {
           <Route path='/editUser' element={<> <Header name="Users" color="grey"/> <NavBar/>  <EditUser/> </>}/>
           <Route path='/viewUser' element={<> <Header name="Users" color="brown"/> <NavBar/>  <UserDetails/> </>}/>
           <Route path='/employees' element={<> <Header name="Employees" color="green"/> <NavBar/>  <Employees/> </>}/>
+          <Route path='/addEmployee' element={<> <Header name="New Employee" color="deepskyblue"/> <NavBar/>  <AddEmployee/> </>}/>
           <Route path='/viewEmployee' element={<> <Header name="Employee" color="turquoise"/> <NavBar/>  <ViewEmployee/> </>}/>
+          <Route path='/employeePassword' element={<> <Header name="Password" color="cornflowerblue"/> <NavBar/>  <EmployeePasword/> </>}/>
+          <Route path='/editEmployee' element={<> <Header name="Edit Employee" color="cornflowerblue"/> <NavBar/>  <EditEmployee/> </>}/>
         </Routes>
       </BrowserRouter>
     </>

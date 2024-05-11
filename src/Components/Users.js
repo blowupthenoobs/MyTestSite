@@ -28,7 +28,7 @@ export default function Users() {
   return (
     <div>
       <br/>
-      <div className='userHeading'>
+      <div className='heading'>
         <h1>All Users</h1>
         <Link to="/addUser" className="addUserButton"> + Add User </Link>
       </div>

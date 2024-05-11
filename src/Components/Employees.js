@@ -23,7 +23,11 @@ export default function Users() {
 
   return (
     <div>
-      <h1>Employees</h1>
+      <br/>
+      <div className='heading'>
+        <h1>Employees</h1>
+        <Link to="/addEmployee" className="addUserButton"> + Add Employee </Link>
+      </div>
       <div className='employee-container'>
           {employees.map((item)=>{
             return(

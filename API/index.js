@@ -124,3 +124,24 @@ app.get("/employees/:id", async (req, res)=>{
     var getEmployee = await Employees.findById(_id);
     res.status(200).send(getEmployee);
 })
+
+app.patch("/employees/:id", async (req, res)=>{
+    try{
+        const _id = req.params.id;
+        const updateEmployee = await Employees.findByIdAndUpdate(_id, req.body);
+        res.status(200).send(updateEmployee);
+    } catch (error) {
+        res.status(500).send("Server Crashed");
+    }
+})
+
+app.delete("/employees/:id", async (req, res)=>{
+    try {
+        const _id = req.params.id;
+
+        const deleteEmployee = await Employees.findByIdAndDelete(_id);
+        res.status(200).send(deleteEmployee);
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})

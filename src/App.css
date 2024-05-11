@@ -220,7 +220,7 @@ span{
   text-decoration: none;
 }
 
-.userHeading{
+.heading{
   display:flex;
   flex-wrap:wrap;
   justify-content: space-between;
@@ -240,8 +240,24 @@ span{
   flex-direction: column;
 }
 
+.center-form{
+  justify-content: center;
+  margin-top:20%;
+  display:flex;
+  flex-direction:column;
+}
+
 .form h1{
   font-size: 75px;
+  text-align: center;
+}
+
+.form h2{
+  font-size: 50px;
+  text-align: center;
+}
+
+.form h3{
   text-align: center;
 }
 
@@ -282,6 +298,19 @@ span{
   gap:10px;
 }
 
+.form .sameLineDiv{
+  width:76.5%;
+  height:5%;
+  justify-content: space-between;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  gap:10px;
+  margin:auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .sameLineDiv img{
     margin-top:5px;
     width: 30px;
@@ -295,6 +324,7 @@ span{
   flex-direction: row;
   align-items:center;
   gap:10px;
+  margin:auto;
 }
 
 .employee{
@@ -308,4 +338,15 @@ span{
   justify-content:space-evenly;
   display:flex;
   flex-wrap:wrap;
+}
+
+.employee-details{
+  width:50%;
+  height:30vh;
+  margin:auto;
+  margin-top:50px;
+  background-color:aqua;
+  padding:15px;
+  border-radius:15px;
+  justify-content:center;
 }
